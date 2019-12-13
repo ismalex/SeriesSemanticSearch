@@ -1,0 +1,125 @@
+###
+##QUERY 1
+#SEARCH SERIES BY ACTOR
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX web: <http://www.w3.org/2007/uwa/context/web.owl#>
+prefix webseries: <http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#>
+SELECT ?SeriesName ?CastType ?AFirstName ?ALastName
+WHERE { 
+	?Series a webseries:Series.
+    ?Series webseries:Name ?SeriesName.
+	?Series webseries:hasCast ?Cast.
+	?Cast webseries:Name ?CastType.
+	?Cast webseries:hasMember ?Actor.
+	?Actor webseries:FirstName ?AFirstName.
+	?Actor webseries:LastName ?ALastName.
+  FILTER(REGEX(STR(?AFirstName),"M") && REGEX(STR(?ALastName),"")  )
+     
+}
+
+
+
+
+###
+#WEBSERIES SEARCH 
+#QUERY 2
+#NESTED SELECT TO GET ALL THE INFORMATION OF THE SERIES 
+#NAME, DESCRIPTION, YEAR, GENRE, HOW MANY SEASONS
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX web: <http://www.w3.org/2007/uwa/context/web.owl#>
+prefix webseries: <http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#>
+
+SELECT ?SeriesName ?SeriesYear ?SeriesGenre ?SeriesDescription ?totalSeasons
+WHERE {
+  ?Series a webseries:Series.
+  ?Series webseries:Name ?SeriesName.
+  ?Series webseries:Year ?SeriesYear.
+  ?Series webseries:Description ?SeriesDescription.
+  ?Series webseries:hasGenre ?Genre.
+  ?Genre webseries:Name ?SeriesGenre
+  FILTER (regex(str(?SeriesName), "s"))
+  
+  {
+  SELECT ?Series (COUNT (?Season) as ?totalSeasons)
+  	WHERE {
+      ?Series a webseries:Series.
+      ?Series webseries:hasSeason ?Season.
+      ?Season webseries:Name ?SeasonName
+  		}	
+	GROUP BY(?Series) 
+  }
+}
+
+
+##QUERY 3
+#SELECT THE DETAILED CAST OF A SEARIES
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX web: <http://www.w3.org/2007/uwa/context/web.owl#>
+prefix webseries: <http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#>
+
+SELECT  ?sName ?nCast ?ActorFName ?ActorLName
+WHERE { 
+	?Series a webseries:Series.
+	?Series webseries:Name ?sName.
+	?Series webseries:hasCast ?Cast.
+	?Cast webseries:Name ?nCast.
+	?Cast webseries:hasMember ?Actor.
+	?Actor webseries:FirstName ?ActorFName.
+	?Actor webseries:LastName ?ActorLName.
+
+FILTER (regex(str(?sName), ""))
+}  
+ 
+##QUERY 4
+#SELECT THE DETAILED EPISODE LIST OF A SERIES 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX web: <http://www.w3.org/2007/uwa/context/web.owl#>
+prefix webseries: <http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#>
+SELECT ?SeriesName ?Season ?EpisodeName ?EpisodeDuration
+WHERE { 
+	?Series a webseries:Series.
+	?Series webseries:Name ?SeriesName.
+	?Series webseries:hasSeason ?SeriesSeason.
+	?SeriesSeason webseries:Name ?Season.
+	?SeriesSeason webseries:hasEpisode ?Episode.
+	?Episode webseries:Name ?EpisodeName.
+	?Episode webseries:Duration ?EpisodeDuration 
+FILTER(REGEX(STR(?SeriesName),""))
+}
+      
+
+
+
+
+###
+##QUERY 5
+#SERIES ADVANCED SEARCH  
+#SELECT SERIES THAT HAVE A CERTAIN NUMBER OF SEASONS test
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX web: <http://www.w3.org/2007/uwa/context/web.owl#>
+prefix webseries: <http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#>
+
+SELECT DISTINCT ?SeriesName  ?SeriesSeason ?Season ?totalEpisodes  
+WHERE {
+  ?Series a webseries:Series.
+  ?Series webseries:Name ?SeriesName.
+  ?Series webseries:hasSeason ?SeriesSeason.
+  ?SeriesSeason webseries:Name ?Season.
+  ?SeriesSeason webseries:hasEpisode ?Episode.
+                  
+ {
+    SELECT  ?SeriesSeason  (COUNT (?SeriesSeason) as ?totalEpisodes)
+WHERE {
+  ?Series a webseries:Series.
+  ?Series webseries:Name ?SeriesName.
+  ?Series webseries:hasSeason ?SeriesSeason.
+  ?SeriesSeason webseries:hasEpisode ?Episode.
+}
+    group by (?SeriesSeason ) 
+    HAVING  (COUNT (?Series) >= 0)
+}
+
+}
+
+
+ 

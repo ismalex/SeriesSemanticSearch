@@ -927,6 +927,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastgot">
         <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast"/>
         <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Emilia"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Main Cast</webseries:Name>
     </owl:NamedIndividual>
     
 
