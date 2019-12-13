@@ -1,0 +1,1179 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/aragon/ontologies/2019/10/untitled-ontology-3"
+     xml:base="http://www.semanticweb.org/aragon/ontologies/2019/10/untitled-ontology-3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:webseries="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasCast -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasCast">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Cast"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasEpisode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasEpisode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasGenre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasMember">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Cast"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Rating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasSeason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#hasSeason">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#DOB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#DOB">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Duration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#FirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#FirstName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#LastName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#LastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#LastName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Name">
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Year"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Score -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Score">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Animated -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Animated">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Cast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Cast">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#China -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#China">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Comedy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Comedy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Crime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Crime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#DIrector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#DIrector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Drama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Drama">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#G -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#G">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Genre">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#India -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#India">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Cast"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#NC-17 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#NC-17">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#PG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#PG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#PG-13 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#PG-13">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Person">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Producer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Producer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#R -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#R">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Rating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Cast"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#UK -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#UK">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#USA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#USA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Writer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Action -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Action">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Action"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">action</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName>ActorFName</webseries:FirstName>
+        <webseries:LastName>ActorLName</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Alison -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Alison">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:DOB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29/12/1982</webseries:DOB>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alisson</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brie</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#CUK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#CUK">
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#CUSA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#CUSA">
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Christina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Christina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:DOB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03/051975</webseries:DOB>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christina</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hendricks</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Comedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Comedy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Comedy"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Community -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Community">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <webseries:hasCast rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastCom"/>
+        <webseries:hasCountry rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#CUSA"/>
+        <webseries:hasGenre rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Comedy"/>
+        <webseries:hasRating rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingPG13"/>
+        <webseries:hasSeason rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonCom1"/>
+        <webseries:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A suspended lawyer is forced to enroll in a community college with an eclectic staff and student body.</webseries:Description>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community</webseries:Name>
+        <webseries:Year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</webseries:Year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Courteney -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Courteney">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Courteney</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cox</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Drama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Drama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Drama"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Elizabeth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Elizabeth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elisabeth</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moss</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Emilia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Emilia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:DOB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20/20/1984</webseries:DOB>
+        <webseries:FirstName>Emilia</webseries:FirstName>
+        <webseries:LastName>Clarke</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:20:20</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EP1 : The One Where Monica Gets a Roommate</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep5: The One with Five Steaks and an Eggplant</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep1: The One with the Princess Leia Fantasy</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep2: The One Where No One&apos;s Ready</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep2: The One with the Sonogram at the End</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:34</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EP3: The One with the Thumb</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:45</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep4: The One with George Stephanopoulos</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep5: The One with the East German Laundry Detergent</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep1: The One with Ross&apos;s New Girlfriend</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep2: The One with the Breast Milk</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep3: The One Where Heckles Dies</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name>Ep3: The One with Phoebe&apos;s Husband</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeCom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeCom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:26:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep1: Pilot</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeCom2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeCom2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:22:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep2: Spanish 101</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:49:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep1: Smoke Gets in Your Eyes</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:47:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep2: Ladies Room</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:45:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marriage of Figaro</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:46:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep4: New Amsterdam</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeNar1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeNar1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:57:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep1: Descenso</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeNarcos1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeNarcos1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:46:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep2: The Sword of Simón Bolivar</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01:02:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep1: Winter is coming</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:56:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep2: The Kingsroad</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:58:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep3: Lord Snow</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:53:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep1: The North Remembers</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodes"/>
+        <webseries:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:54:00</webseries:Duration>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ep2: The Night Lands</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Friends -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Friends">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <webseries:hasCast rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast"/>
+        <webseries:hasCast rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCast"/>
+        <webseries:hasCountry rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#CUSA"/>
+        <webseries:hasGenre rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Comedy"/>
+        <webseries:hasRating rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingPG13"/>
+        <webseries:hasSeason rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season1"/>
+        <webseries:hasSeason rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season2"/>
+        <webseries:hasSeason rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season3"/>
+        <webseries:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Six young people from New York, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.</webseries:Description>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">friends</webseries:Name>
+        <webseries:Year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1994</webseries:Year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Gillian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Gillian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gillian</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacobs</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Jennifer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Jennifer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName>Jennifer</webseries:FirstName>
+        <webseries:LastName>Aniston</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Jhon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Jhon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jhon</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ham</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Joey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Joey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matt</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LeBlanc</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Lisa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Lisa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lisa</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kudrow</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Madmen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Madmen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <webseries:hasCast rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastMad"/>
+        <webseries:hasCast rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeconCastMad"/>
+        <webseries:hasCountry rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#CUK"/>
+        <webseries:hasGenre rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Drama"/>
+        <webseries:hasSeason rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonMad1"/>
+        <webseries:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A drama about one of New York&apos;s most prestigious ad agencies at the beginning of the 1960s, focusing on one of the firm&apos;s most mysterious but extremely talented ad executives, Donald Draper.</webseries:Description>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mad Men</webseries:Name>
+        <webseries:Year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</webseries:Year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Courteney"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Jennifer"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Joey"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Lisa"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Mattew"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Main Cast</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastCom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastCom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Alison"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Gillian"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Main Cast</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastMad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastMad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Christina"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Elizabeth"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Jhon"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Main Cast</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastNarcos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastNarcos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Pedro"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Wagner"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Main Cast</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastgot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastgot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCast"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Emilia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Mattew -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Mattew">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mattew</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perry</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MoneyHeist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MoneyHeist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">money heist</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Narcos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Narcos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <webseries:hasCast rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastNarcos"/>
+        <webseries:hasGenre rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Action"/>
+        <webseries:hasRating rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingPG"/>
+        <webseries:hasSeason rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonNar1"/>
+        <webseries:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar, as well as the many other drug kingpins who plagued the country through the years.</webseries:Description>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narcos</webseries:Name>
+        <webseries:Year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</webseries:Year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Paul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Paul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rud</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Pedro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Pedro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pedro</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascal</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingPG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingPG">
+        <webseries:Name>PG</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingPG13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingPG13">
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PG-13</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingR">
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Sean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Sean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sean</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bean</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode1"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode2"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode3"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode4"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode5"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode10"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode6"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode7"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode8"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode9"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode11"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episode12"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonCom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonCom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeCom1"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeCom2"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonGot1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonGot1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot1"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot2"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot3"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonMad1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonMad1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad1"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad2"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad3"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeMad4"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonNar1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonNar1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeNar1"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#EpisodeNarcos1"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Seasongot2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Seasongot2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Season"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot4"/>
+        <webseries:hasEpisode rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Episodegot5"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeconCastMad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeconCastMad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCast"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Alison"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secondary Cast</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCast"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Paul"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secondary Cast</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCastgot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCastgot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCast"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Pedro"/>
+        <webseries:hasMember rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Sean"/>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secondary Cast</webseries:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Wagner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Wagner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Actor"/>
+        <webseries:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wagner</webseries:FirstName>
+        <webseries:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moura</webseries:LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#got -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#got">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Series"/>
+        <webseries:hasCast rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#MainCastgot"/>
+        <webseries:hasCast rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SecondaryCastgot"/>
+        <webseries:hasGenre rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Action"/>
+        <webseries:hasRating rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#RatingR"/>
+        <webseries:hasSeason rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#SeasonGot1"/>
+        <webseries:hasSeason rdf:resource="http://www.semanticweb.org/aragon/ontologies/2019/10/webseries#Seasongot2"/>
+        <webseries:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for thousands of years.</webseries:Description>
+        <webseries:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">game of thrones</webseries:Name>
+        <webseries:Year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</webseries:Year>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
